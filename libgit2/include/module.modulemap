@@ -1,6 +1,9 @@
 module libgit2 {
 	umbrella header "git2.h"
 
+	// Link against libz, libiconv, libcurl
+	
+
 	export *
 	module * { export * }
 
