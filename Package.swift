@@ -30,7 +30,8 @@ let package = Package(
         .target(
             name: "SwiftGit2",
             dependencies: ["Clibgit2","Result"],
-			path: "SwiftGit2"),
+			path: "SwiftGit2",
+            sources: ["Swift"]),
         .target(
             name: "Clibgit2",
             path: "Clibgit2"),
