@@ -17,7 +17,6 @@ let package = Package(
             targets: ["SwiftGit2"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/antitypical/Result.git", from: "5.0.0"),
 		.package(url: "https://github.com/Quick/Quick", from: "1.3.2"),
 		.package(url: "https://github.com/Quick/Nimble", from: "7.3.1"),
 		.package(url: "https://github.com/muizidn/ZipArchive", .branch("master"))
@@ -29,7 +28,7 @@ let package = Package(
             path: "example"),
         .target(
             name: "SwiftGit2",
-            dependencies: ["Clibgit2","Result"],
+            dependencies: ["Clibgit2"],
 			path: "SwiftGit2",
             sources: ["Swift"]),
         .target(
