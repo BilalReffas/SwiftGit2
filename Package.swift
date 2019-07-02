@@ -29,11 +29,11 @@ let package = Package(
             path: "example"),
         .target(
             name: "SwiftGit2",
-            dependencies: ["libgit2","Result"],
+            dependencies: ["Clibgit2","Result"],
 			path: "SwiftGit2"),
         .target(
-            name: "libgit2",
-            path: "libgit2"),
+            name: "Clibgit2",
+            path: "Clibgit2"),
 	    .testTarget(
 			name: "SwiftGit2Tests",
 			dependencies: ["SwiftGit2", "Quick", "Nimble", "ZipArchive"],

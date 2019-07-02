@@ -1,0 +1,7 @@
+mac:
+  build:
+    -Xlinker:
+      - ./External/libgit2.a
+      - ./External/libssl.a
+      - ./External/libcrypto.a
+      - /usr/lib/libcurl.dylib
