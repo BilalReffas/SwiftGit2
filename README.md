@@ -71,5 +71,12 @@ We :heart: to receive pull requests! GitHub makes it easy:
 
 All contributions should match GitHub’s [Swift Style Guide](https://github.com/github/swift-style-guide).
 
+# Swift Package Manager
+
+Swift Package Manager currently has no features we needed except to do it manually. It includes passing flags, linker, and many more. We use [SPMCLI] (https://github.com/muizidn/spmcli) to manage it. Project who uses SwiftGit2 as dependency in Swift Package Manager can use SPMCLI to automate these tedious tasks.
+
+See our [SPMCLI.resolved](SPMCLI.resolved) for more info.
+
+
 ## License
 SwiftGit2 is available under the MIT license.
