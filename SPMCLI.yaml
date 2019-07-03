@@ -5,3 +5,22 @@ mac:
       - ${PWD}/External/libssl.a
       - ${PWD}/External/libcrypto.a
       - /usr/lib/libcurl.dylib
+  # SPMCLI doesn't support make reference to resolved config yet
+  # Now we have to manually copy paste all configuration
+  # so swiftpm will pass these values
+  # See: https://github.com/pondok-programmer/spmcli/issues/2
+  test:
+    -Xcc:
+    - -DHAVE_INTTYPES_H
+    - -DHAVE_PKCRYPT
+    - -DHAVE_STDINT_H
+    - -DHAVE_WZAES
+    - -DHAVE_ZLIB
+    - -DMZ_ZIP_NO_SIGNING
+    -Xlinker:
+    - ./External/libgit2.a
+    - ./External/libssl.a
+    - ./External/libcrypto.a
+    - /usr/lib/libcurl.dylib
+    - /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libz.tbd
+    - /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libiconv.tbd
