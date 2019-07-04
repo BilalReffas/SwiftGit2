@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "SwiftGit2",
     platforms: [
-      .macOS(.v10_11)
+      .macOS(.v10_11),
     ],
     products: [
         .executable(
@@ -19,7 +19,7 @@ let package = Package(
     dependencies: [
 		.package(url: "https://github.com/Quick/Quick", from: "1.3.2"),
 		.package(url: "https://github.com/Quick/Nimble", from: "7.3.1"),
-		.package(url: "https://github.com/muizidn/ZipArchive", .branch("master"))
+		.package(url: "https://github.com/muizidn/ZipArchive", .branch("master")),
     ],
     targets: [
         .target(
@@ -29,7 +29,7 @@ let package = Package(
         .target(
             name: "SwiftGit2",
             dependencies: ["Clibgit2"],
-			path: "SwiftGit2",
+            path: "SwiftGit2",
             sources: ["Swift"]),
         .target(
             name: "Clibgit2",
@@ -37,7 +37,6 @@ let package = Package(
 	    .testTarget(
 			name: "SwiftGit2Tests",
 			dependencies: ["SwiftGit2", "Quick", "Nimble", "ZipArchive"],
-			path: "SwiftGit2Tests")
+			path: "SwiftGit2Tests"),
     ]
 )
-

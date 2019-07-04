@@ -67,6 +67,7 @@ opt_in_rules:
 excluded:
   - Carthage
   - External
+  - .build
 
 line_length:
   ignores_function_declarations: true
